@@ -13,7 +13,11 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const socialLinks = [
   { icon: Github, href: "https://github.com/janylsonfilho", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/janylsonfilho", label: "LinkedIn" },
-  { icon: WhatsAppIcon, href: "https://wa.me/5585989551746?text=Olá%20Janylson%2C%20gostaria%20de%20falar%20com%20você", label: "WhatsApp" },
+  {
+    icon: WhatsAppIcon,
+    href: "https://wa.me/5585989551746?text=Olá%20Janylson%2C%20gostaria%20de%20falar%20com%20você",
+    label: "WhatsApp",
+  },
 ]
 
 export default function Footer() {
@@ -23,30 +27,43 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-muted/30">
       <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+
+          {/* Branding */}
+          <div className="text-center md:text-left space-y-2">
+            <p className="text-sm font-medium">
+              {t.footer.roleText}
+            </p>
+
             <p className="text-sm text-muted-foreground">
+              {t.footer.slogan}
+            </p>
+
+            <p className="text-xs text-muted-foreground mt-2">
               © {currentYear}. {t.footer.rights}
             </p>
           </div>
 
-          <div className="flex items-center gap-4">
+          {/* Social */}
+          <div className="flex items-center gap-5">
             {socialLinks.map((link) => {
               const Icon = link.icon
+
               return (
                 <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
                   aria-label={link.label}
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
               )
             })}
           </div>
+
         </div>
       </div>
     </footer>
