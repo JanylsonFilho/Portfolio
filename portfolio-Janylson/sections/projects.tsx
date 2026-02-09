@@ -20,21 +20,21 @@ export default function Projects() {
       title: t.projects.project1Title, // UniQuadras
       description: t.projects.project1Desc,
       tags: ["Java", "Spring Boot", "PostgreSQL", "Microservices"],
-      image: "/modern-web-application.png",
+      image: "/uniquadras.png",
       githubUrl: "https://github.com/JanylsonFilho/Uniquadras-SpringBoot",
     },
     {
       title: t.projects.project2Title, // Restaurante
       description: t.projects.project2Desc,
       tags: ["Node.js", "Express", "MySQL", "MVC Architecture"],
-      image: "/api-dashboard.jpg",
+      image: "/restaurante.png",
       githubUrl: "https://github.com/JanylsonFilho/Sistema-Restaurante",
     },
     {
       title: t.projects.project3Title, // Graph Theory
       description: t.projects.project3Desc,
       tags: ["Java", "Graph Theory", "Algorithms", "Heuristics"],
-      image: "/placeholder.svg",
+      image: "/graph.jpg",
       githubUrl: "https://github.com/JanylsonFilho/Graph",
     },
     {
@@ -69,42 +69,42 @@ export default function Projects() {
       title: t.projects.project10Title, // CANA
       description: t.projects.project10Desc,
       tags: ["Java", "Big O", "Backtracking", "Dynamic Programming"],
-      image: "/placeholder.svg",
+      image: "/algorithms.jpg",
       githubUrl: "https://github.com/JanylsonFilho/CANA",
     },
     {
       title: t.projects.project8Title, // Indice Remissivo
       description: t.projects.project8Desc,
       tags: ["Java", "Data Structures", "Algorithms", "Indexing"],
-      image: "/placeholder.svg",
+      image: "/indiceRemissivo.jpg",
       githubUrl: "https://github.com/JanylsonFilho/Indice-Remissivo",
     },
     {
       title: t.projects.project9Title, // Frogger
       description: t.projects.project9Desc,
       tags: ["Java", "OOP", "Swing/AWT", "Game Dev"],
-      image: "/placeholder.svg",
+      image: "/frogger.jpg",
       githubUrl: "https://github.com/JanylsonFilho/Frogger_Game",
     },
     {
       title: t.projects.project11Title, // Calculadora Proposicional
       description: t.projects.project11Desc,
       tags: ["Java", "Logic", "Truth Table", "Data Structures"],
-      image: "/placeholder.svg",
+      image: "/calculadoraProposicional.jpg",
       githubUrl: "https://github.com/JanylsonFilho/Calculadora-Proposicional",
     },
     {
       title: t.projects.project12Title, // Estacionamento
       description: t.projects.project12Desc,
       tags: ["Java", "OOP", "Console System", "Management"],
-      image: "/placeholder.svg",
+      image: "/estacionamento.jpg",
       githubUrl: "https://github.com/JanylsonFilho/Menu-de-Estacionamento",
     },
     {
       title: t.projects.project13Title, // Álgebra Linear
       description: t.projects.project13Desc,
       tags: ["Java", "Math", "Linear Algebra", "Matrix Operations"],
-      image: "/placeholder.svg",
+      image: "/algebraLinear.jpg",
       githubUrl: "https://github.com/JanylsonFilho/Biblioteca-de-Algebra-Linear",
     },
   ]
