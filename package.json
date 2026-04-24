@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-root",
+  "private": true,
+  "scripts": {
+    "build": "npm install --prefix portfolio-Janylson && npm run build --prefix portfolio-Janylson",
+    "dev": "npm run dev --prefix portfolio-Janylson",
+    "start": "npm run start --prefix portfolio-Janylson"
+  }
+}
