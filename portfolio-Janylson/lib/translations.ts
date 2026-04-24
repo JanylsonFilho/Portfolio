@@ -9,7 +9,7 @@ export const translations = {
       experience: "Experiência",
       contact: "Contato",
     },
-    portfolio: "Portfolio",
+    portfolio: "Janylson Filho",
 
     hero: {
       role: "Full Stack Developer",
@@ -23,13 +23,15 @@ export const translations = {
     about: {
       title: "Sobre Mim",
       paragraph1:
-        "Sou Janylson Filho — Junior Full Stack Developer e estudante de Ciência da Computação. Projetos que desenvolvo priorizam arquitetura escalável, API design (REST), modelagem relacional e boas práticas de teste.",
+        "Sou Janylson Filho — Desenvolvedor Full Stack Júnior e estudante de Ciência da Computação. Projetos que desenvolvo priorizam arquitetura escalável, API design (REST), modelagem relacional e boas práticas de teste.",
       paragraph2:
-        "No backend trabalho com TypeScript/Node (Express/Spring Boot quando aplicável), validação com Zod, autenticação JWT e testes com Jest. No frontend utilizo React e Next.js para construir interfaces performáticas, acessíveis e otimizadas para SEO.",
+        "No backend trabalho com TypeScript/Node (Express/Spring Boot quando aplicável), validação com Zod, autenticação JWT, testes com Jest e integrações com AWS para rotinas de processamento. No frontend utilizo React e Next.js para construir interfaces performáticas e acessíveis.",
       experienceTitle: "Experiência",
       experienceContent: "Anos de experiência em desenvolvimento web",
       projectsTitle: "Projetos",
       projectsContent: "Projetos completos entregues",
+      resumeTitle: "Currículo",
+      resumeContent: "Versão para download disponível em breve",
     },
 
     skills: {
@@ -96,16 +98,21 @@ export const translations = {
       position: "Cargo / Posição",
       company: "Nome da Empresa",
       period1: "2025 - Presente",
+      period2: "Março 2026 - Presente",
       jobDesc: "Descrição das principais responsabilidades, projetos desenvolvidos e tecnologias utilizadas",
       job1Title: "Estagiário de Desenvolvimento Full Stack",
       job1Company: "Conta Plena",
-      job1Desc: "Estagiário de Desenvolvimento Full Stack na Conta Plena, atuando em um projeto de sistema financeiro para emissão de notas de serviço. No backend trabalho com TypeScript, Express, construção de REST APIs, validação com Zod, testes com Jest e banco de dados MongoDB. No front-end utilizo React. Minhas responsabilidades incluem colaborar com a equipe no desenvolvimento de novas funcionalidades e realizar manutenção e correção de bugs.",
+      job1Desc: "Estagiário de Desenvolvimento Full Stack na Conta Plena, atuando em um projeto de sistema financeiro para emissão de notas de serviço. No backend trabalho com TypeScript, Express, construção de REST APIs, validação com Zod, testes com Jest, banco de dados MongoDB e uso de AWS para implementar rotinas de processamento de jobs. No front-end utilizo React com TypeScript e Vite. Minhas responsabilidades incluem colaborar com a equipe no desenvolvimento de novas funcionalidades e realizar manutenção e correção de bugs.",
+      job2Title: "Bolsa de incentivo à inovação e à pesquisa científica e tecnológica",
+      job2Company: "UNIFOR",
+      job2Desc: "Atuação em uma bolsa voltada para IA aplicada à saúde, no desenvolvimento da IARA, uma assistente virtual de saúde. Trabalho na evolução de uma solução web composta por painel administrativo full stack e landing page institucional. No painel, atuo no backend com TypeScript, Express, PostgreSQL, Sequelize e Zod, implementando APIs e regras de negócio para fluxos ligados a usuários, conversas, notificações, agendamentos, histórico de campanhas e mensageria da assistente. Também tenho envolvimento com system templates utilizados no comportamento e na operação da IARA. No frontend, utilizo React com TypeScript e Vite para construir fluxos administrativos e integração com a API. Além disso, desenvolvi a landing page do projeto com Next.js, estruturando seções institucionais, apresentação do produto e canais de contato.",
     },
 
     contact: {
       title: "Entre em Contato",
       description: "Interessado em trabalhar juntos? Vamos conversar!",
       email: "Email",
+      emailAction: "Enviar email",
       phone: "Telefone",
       location: "Localização",
       linkedin: "LinkedIn",
@@ -132,7 +139,8 @@ export const translations = {
       rights: "Todos os direitos reservados.",
       builtWith: "Desenvolvido por Janylson Filho",
       roleText: "Janylson Filho — Desenvolvedor Web Full Stack",
-      slogan: "Construindo aplicações web escaláveis e modernas."
+      slogan: "Construindo aplicações web escaláveis e modernas.",
+      backToTop: "Voltar ao topo"
     },
   },
   en: {
@@ -143,7 +151,7 @@ export const translations = {
       experience: "Experience",
       contact: "Contact",
     },
-    portfolio: "Portfolio",
+    portfolio: "Janylson Filho",
 
     hero: {
       role: "Full Stack Developer",
@@ -159,11 +167,13 @@ export const translations = {
       paragraph1:
         "I'm Janylson Filho — a Junior Full Stack Developer and Computer Science student. My work emphasizes scalable architecture, API design (REST), relational data modeling and test-driven practices.",
       paragraph2:
-        "On the backend I use TypeScript/Node (Express or Spring Boot where relevant), Zod for validation, JWT for authentication and Jest for testing. On the frontend I use React and Next.js to build performant, accessible and SEO-friendly interfaces.",
+        "On the backend I use TypeScript/Node (Express or Spring Boot where relevant), Zod for validation, JWT for authentication, Jest for testing, and AWS integrations for processing routines. On the frontend I use React and Next.js to build performant and accessible interfaces.",
       experienceTitle: "Experience",
       experienceContent: "Years of experience in web development",
       projectsTitle: "Projects",
       projectsContent: "Complete projects delivered",
+      resumeTitle: "Resume",
+      resumeContent: "Download version coming soon",
     },
 
     skills: {
@@ -230,16 +240,21 @@ export const translations = {
       position: "Position / Role",
       company: "Company Name",
       period1: "2025 - Present",
+      period2: "March 2026 - Present",
       jobDesc: "Description of main responsibilities, projects developed and technologies used",
       job1Title: "Full Stack Development Intern",
       job1Company: "Conta Plena",
-      job1Desc: "Full Stack Development Intern at Conta Plena, working on a financial system project for service invoice issuance. On the backend I work with TypeScript, Express, REST API development, validation with Zod, testing with Jest and MongoDB database. On the frontend I use React. My main responsibilities include collaborating with the team on developing new features and maintaining and fixing bugs.",
+      job1Desc: "Full Stack Development Intern at Conta Plena, working on a financial system project for service invoice issuance. On the backend I work with TypeScript, Express, REST API development, validation with Zod, testing with Jest, MongoDB, and AWS to build job processing routines. On the frontend I use React with TypeScript and Vite. My main responsibilities include collaborating with the team on developing new features and maintaining and fixing bugs.",
+      job2Title: "Innovation and Scientific and Technological Research Scholarship",
+      job2Company: "UNIFOR",
+      job2Desc: "Worked on an AI scholarship focused on healthcare, contributing to the development of IARA, a virtual health assistant. I help evolve a web solution composed of a full stack admin panel and an institutional landing page. In the admin panel, I work on the backend with TypeScript, Express, PostgreSQL, Sequelize, and Zod, implementing APIs and business rules for flows related to users, conversations, notifications, scheduling, campaign history, and the assistant's messaging layer. I am also involved with system templates used in IARA's behavior and operation. On the frontend, I use React with TypeScript and Vite to build administrative flows and API integrations. In addition, I developed the project's landing page with Next.js, structuring institutional sections, product presentation, and contact channels.",
     },
 
     contact: {
       title: "Get In Touch",
       description: "Interested in working together? Let's talk!",
       email: "Email",
+      emailAction: "Send email",
       phone: "Phone",
       location: "Location",
       linkedin: "LinkedIn",
@@ -266,7 +281,8 @@ export const translations = {
       rights: "All rights reserved.",
       builtWith: "Developed by Janylson Filho",
       roleText: "Janylson Filho — Full Stack Web Developer",
-      slogan: "Building scalable and modern web applications."
+      slogan: "Building scalable and modern web applications.",
+      backToTop: "Back to top"
     },
   },
 } as const

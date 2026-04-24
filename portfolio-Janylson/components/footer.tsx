@@ -1,7 +1,8 @@
 "use client"
 
-import { Github, Linkedin } from "lucide-react"
+import { ArrowUp, Github, Linkedin } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
@@ -24,13 +25,17 @@ export default function Footer() {
   const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
     <footer className="border-t border-border bg-muted/30">
-      <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      <ScrollReveal className="container mx-auto px-6 py-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
 
           {/* Branding */}
-          <div className="text-center md:text-left space-y-2">
+          <div className="flex-1 min-w-0 text-center md:text-left space-y-2">
             <p className="text-sm font-medium">
               {t.footer.roleText}
             </p>
@@ -45,27 +50,37 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div className="flex items-center gap-5">
-            {socialLinks.map((link) => {
-              const Icon = link.icon
+          <div className="flex w-full md:w-auto items-center justify-center md:justify-end md:ml-auto">
+            <div className="flex items-center gap-5 md:mr-20 lg:mr-28">
+              {socialLinks.map((link) => {
+                const Icon = link.icon
 
-              return (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              )
-            })}
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                    className="text-muted-foreground hover:text-primary transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                )
+              })}
+            </div>
+
+            <button
+              type="button"
+              onClick={scrollToTop}
+              aria-label={t.footer.backToTop}
+              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-background/70 p-2.5 text-sm text-muted-foreground transition-all duration-300 hover:border-primary/40 hover:text-primary"
+            >
+              <ArrowUp className="w-4 h-4" />
+            </button>
           </div>
-
         </div>
-      </div>
+      </ScrollReveal>
     </footer>
   )
 }

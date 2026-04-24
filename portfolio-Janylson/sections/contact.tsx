@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card"
 import { Mail, Linkedin, Github, ExternalLink } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 // Ícone do WhatsApp
 function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -22,6 +23,7 @@ export default function Contact() {
       icon: Mail,
       title: t.contact.email,
       value: t.contact.emailValue,
+      description: t.contact.emailAction,
       link: `mailto:${t.contact.emailValue}`,
     },
     // 2. LinkedIn
@@ -53,13 +55,13 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16 space-y-4">
+        <ScrollReveal className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold">{t.contact.title}</h2>
           <div className="w-20 h-1 bg-primary rounded-full mx-auto" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t.contact.description}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Layout ajustado: 1 coluna (mobile), 2 (tablet), 4 (desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -67,49 +69,34 @@ export default function Contact() {
             const Icon = item.icon
             
             return (
-              <Card 
-                key={index} 
-                className="relative overflow-hidden group border bg-muted/30 hover:border-primary transition-all duration-300"
-              >
-                <div className="h-full p-6 flex flex-col items-center text-center justify-between min-h-[200px]">
-                  
-                  {/* Ícone */}
-                  <div className="p-4 rounded-full bg-muted mb-4 transition-transform duration-300 group-hover:scale-110">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
+              <ScrollReveal key={index} delay={index * 90}>
+                <Card className="relative overflow-hidden border bg-muted/30">
+                  <div className="h-full p-6 flex flex-col items-center text-center justify-between min-h-[200px]">
+                    <div className="p-4 rounded-full bg-muted mb-4">
+                      <Icon className="w-8 h-8 text-primary" />
+                    </div>
 
-                  <div className="space-y-2 w-full">
-                    <h3 className="font-semibold text-lg">{item.title}</h3>
-                    
-                    {/* Renderização Lógica do Conteúdo */}
-                    {item.description ? (
-                      // CASO WHATSAPP, LINKEDIN e GITHUB: Valor é texto, Descrição é Link
+                    <div className="space-y-2 w-full">
+                      <h3 className="font-semibold text-lg">{item.title}</h3>
+
                       <div className="flex flex-col items-center gap-2">
-                        <p className="text-muted-foreground font-medium select-text cursor-text">
+                        <p className="text-muted-foreground font-medium break-all max-w-full select-text cursor-text">
                           {item.value}
                         </p>
                         <a 
-                          href={item.link!} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline underline-offset-4 mt-1"
+                          href={item.link!}
+                          target={item.link?.startsWith("http") ? "_blank" : undefined}
+                          rel={item.link?.startsWith("http") ? "noopener noreferrer" : undefined}
+                          className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline underline-offset-4 mt-1 transition-transform duration-300 hover:-translate-y-0.5"
                         >
                           {item.description}
                           <ExternalLink className="w-3 h-3" />
                         </a>
                       </div>
-                    ) : (
-                      // CASO EMAIL: Valor é Link
-                      <a 
-                        href={item.link!}
-                        className="text-muted-foreground font-medium hover:text-primary hover:underline underline-offset-4 transition-colors break-all"
-                      >
-                        {item.value}
-                      </a>
-                    )}
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </ScrollReveal>
             )
           })}
         </div>

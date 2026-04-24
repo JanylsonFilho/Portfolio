@@ -11,6 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function Projects() {
   const { t } = useLanguage()
@@ -113,13 +114,13 @@ export default function Projects() {
     <section id="projects" className="py-24 px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="space-y-12">
-          <div className="text-center max-w-2xl mx-auto">
+          <ScrollReveal className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.projects.title}</h2>
             <div className="w-20 h-1 bg-primary rounded-full mx-auto mb-6" />
             <p className="text-lg text-muted-foreground">{t.projects.description}</p>
-          </div>
+          </ScrollReveal>
 
-          <div className="px-4 md:px-12">
+          <ScrollReveal className="px-1 sm:px-4 md:px-12" delay={120}>
             <Carousel
               opts={{
                 align: "start",
@@ -130,12 +131,12 @@ export default function Projects() {
               <CarouselContent className="-ml-4">
                 {projects.map((project, idx) => (
                   <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                    <Card className="h-full flex flex-col overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl group">
+                    <Card className="h-full flex flex-col overflow-hidden">
                       <div className="relative overflow-hidden aspect-video bg-muted shrink-0">
                         <img
                           src={project.image || "/placeholder.svg"}
                           alt={project.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover"
                         />
                       </div>
 
@@ -172,7 +173,7 @@ export default function Projects() {
               <CarouselPrevious className="hidden md:flex -left-12" />
               <CarouselNext className="hidden md:flex -right-12" />
             </Carousel>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
