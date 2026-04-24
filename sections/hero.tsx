@@ -55,7 +55,7 @@ export default function Hero() {
                   src="/foto-oficial-perfil.jpg"
                   alt="Profile Photo"
                   fill
-                  className="object-cover object-[center_4%] scale-[1.78]"
+                  className="object-cover object-[center_5%] scale-[1.70]"
                   priority
                 />
               </div>
