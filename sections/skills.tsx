@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 const skills = {
   languages: ["TypeScript", "JavaScript", "Java", "Python", "Clojure"],
   frontend: ["React", "Tailwind CSS", "HTML5", "CSS3"],
-  backend: ["Node.js", "Express", "Spring Boot", "REST APIs", "Zod"],
+  backend: ["Node.js", "Express", "Spring Boot", "REST APIs", "Zod", "Jest"],
   databases: ["PostgreSQL", "MySQL", "MongoDB"],
   devops: ["Git", "AWS"],
 }
