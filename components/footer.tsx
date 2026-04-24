@@ -50,8 +50,8 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div className="flex w-full md:w-auto items-center justify-center md:justify-end md:ml-auto">
-            <div className="flex items-center gap-5 md:mr-20 lg:mr-28">
+          <div className="flex w-full flex-col items-center gap-5 md:w-auto md:flex-row md:justify-end md:ml-auto">
+            <div className="flex items-center justify-center gap-5">
               {socialLinks.map((link) => {
                 const Icon = link.icon
 
@@ -74,7 +74,7 @@ export default function Footer() {
               type="button"
               onClick={scrollToTop}
               aria-label={t.footer.backToTop}
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-background/70 p-2.5 text-sm text-muted-foreground transition-all duration-300 hover:border-primary/40 hover:text-primary"
+              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-background/70 p-2.5 text-sm text-muted-foreground transition-all duration-300 hover:border-primary/40 hover:text-primary md:ml-6"
             >
               <ArrowUp className="w-4 h-4" />
             </button>
