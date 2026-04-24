@@ -9,7 +9,7 @@ const skills = {
   frontend: ["React", "Tailwind CSS", "HTML5", "CSS3"],
   backend: ["Node.js", "Express", "Spring Boot", "REST APIs", "Zod"],
   databases: ["PostgreSQL", "MySQL", "MongoDB"],
-  devops: ["Git", "AWS", "CI/CD"],
+  devops: ["Git", "AWS"],
 }
 
 export default function Skills() {
