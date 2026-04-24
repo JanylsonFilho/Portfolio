@@ -31,7 +31,8 @@ export const translations = {
       projectsTitle: "Projetos",
       projectsContent: "Projetos completos entregues",
       resumeTitle: "Currículo",
-      resumeContent: "Versão para download disponível em breve",
+      resumeContent: "Baixe a versão em português do meu currículo.",
+      resumeAction: "Baixar currículo",
     },
 
     skills: {
@@ -173,7 +174,8 @@ export const translations = {
       projectsTitle: "Projects",
       projectsContent: "Complete projects delivered",
       resumeTitle: "Resume",
-      resumeContent: "Download version coming soon",
+      resumeContent: "Download the English version of my resume.",
+      resumeAction: "Download resume",
     },
 
     skills: {

@@ -4,7 +4,11 @@ import { useLanguage } from "@/lib/language-context"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function About() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const resumeFile =
+    language === "pt" ? "/curriculo-Janylson-Filho.pdf" : "/Janylson-Filho-Resume.pdf"
+  const resumeDownloadName =
+    language === "pt" ? "Janylson-Filho-Curriculo.pdf" : "Janylson-Filho-Resume.pdf"
 
   return (
     <section id="about" className="py-24 px-6 bg-muted/30">
@@ -39,10 +43,17 @@ export default function About() {
                 <p className="text-muted-foreground">{t.about.projectsContent}</p>
               </a>
 
-              <div className="block p-6 bg-background border border-border rounded-lg">
+              <a
+                href={resumeFile}
+                download={resumeDownloadName}
+                target="_blank"
+                rel="noreferrer"
+                className="block p-6 bg-background border border-border rounded-lg hover:border-primary hover:-translate-y-1 transition-all duration-300"
+              >
                 <h3 className="text-xl font-semibold mb-2">{t.about.resumeTitle}</h3>
                 <p className="text-muted-foreground">{t.about.resumeContent}</p>
-              </div>
+                <span className="mt-3 inline-flex text-sm font-medium text-primary">{t.about.resumeAction}</span>
+              </a>
             </ScrollReveal>
           </div>
         </div>
