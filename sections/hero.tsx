@@ -52,10 +52,10 @@ export default function Hero() {
             <div className="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px]">
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
                 <Image
-                  src="/foto-perfil-dark.png"
+                  src="/foto-oficial-perfil.jpg"
                   alt="Profile Photo"
                   fill
-                  className="object-cover object-[center_18%]"
+                  className="object-cover object-[center_4%] scale-[1.78]"
                   priority
                 />
               </div>
